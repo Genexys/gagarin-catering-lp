@@ -1,0 +1,150 @@
+.page-banner {
+  padding-top: 30px;
+  padding-left: gw(160px);
+  padding-bottom: 125px;
+  //overflow: hidden;
+
+  @media (max-width: 1024px) {
+    padding-left: 0;
+    padding-bottom: 80px;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &__btn-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    font-family: Roboto-Bold, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    .main-btn {
+      width: 100%;
+      max-width: 275px;
+      margin: 0 16px;
+      padding: 0 10px;
+
+      @media (max-width: 767px) {
+        margin: 16px 0;
+      }
+    }
+
+    > span {
+
+      @media (max-width: 767px) {
+        text-shadow: 0 0 4px #b9b0b0;
+      }
+    }
+  }
+}
+
+.title-page {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0 0 55px;
+  font-family: RobotoCondensed-Bold, sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  color: #4b819a;
+
+  @media (max-width: 1380px) {
+    font-size: calc(8.8vw);
+  }
+
+  @media (max-width: 1380px) {
+    font-size: calc(8.8vw);
+  }
+
+  @media (max-width: 1380px) {
+    font-size: calc(8.8vw);
+  }
+
+  @media (max-width: 460px) {
+    font-size: rem(40px);
+  }
+
+  @media (max-width: 360px) {
+    font-size: rem(35px);
+  }
+}
+
+.banner-flat {
+  position: absolute;
+  top: gw(110px);
+  left: -290px;
+  z-index: 1;
+  will-change: transform;
+  animation: cosmonaut-1 2s 1s ease alternate infinite;
+  pointer-events: none;
+
+  @media (max-width: 1024px) {
+    top: gw(-100px);
+    left: -180px;
+  }
+
+  @media (max-width: 767px) {
+    top: -95px;
+  }
+}
+
+.banner-cosmonaut {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  z-index: 2;
+  display: block;
+  transform: translateX(130%);
+  opacity: 0.9;
+  will-change: transform;
+  animation: cosmonaut-2 3.5s .6s cubic-bezier(0, .44, 0, .99);
+  pointer-events: none;
+
+  &.active {
+    transform: translateX(0) translateY(-10px);
+    animation: cosmonaut-1 2s ease alternate infinite;
+  }
+
+  @media (max-width: 1024px) {
+    z-index: 0;
+  }
+
+  @media (max-width: 767px) {
+    top: 120px;
+  }
+
+  img {
+    max-width: none;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}
+
+@keyframes cosmonaut-1 {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes cosmonaut-2 {
+  0% {
+    transform: translateX(100%) translateY(-10px);
+  }
+  100% {
+    transform: translateX(0) translateY(-10px);
+
+  }
+}

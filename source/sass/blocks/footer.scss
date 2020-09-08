@@ -1,0 +1,255 @@
+.main-footer {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0) 0%, #1e235c 100%);
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__wrapper {
+    max-width: 1080px;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__title {
+    margin: 0 0 50px;
+    font-family: RobotoCondensed-Regular, sans-serif;
+    font-weight: normal;
+    font-size: rem(32px);
+    line-height: 1.1;
+    color: #fffefe;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @media (max-width: 1023px) {
+        margin: 60px auto 0;
+      }
+    }
+
+    .form-btn {
+      max-width: 288px;
+      width: 100%;
+      padding: 0 20px 0 0;
+      margin: 120px auto 0;
+
+      &:after {
+        right: 18px;
+      }
+    }
+  }
+
+  &__text {
+    position: relative;
+    flex-shrink: 0;
+    max-width: 350px;
+    width: 100%;
+    margin-right: 160px;
+    line-height: 1.6;
+
+    @media (max-width: 1070px) {
+      margin-right: 100px;
+    }
+
+    @media (max-width: 1023px) {
+      margin-right: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      right: -85px;
+      width: 2px;
+      height: 175px;
+      background-color: #fff;
+
+      @media (max-width: 1070px) {
+        right: -25px;
+      }
+
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+  }
+
+  &__logo {
+    padding-right: 40px;
+
+    @media (max-width: 600px) {
+      padding-right: 0x;
+    }
+  }
+
+  &__soc-list {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+    padding-top: 20px;
+
+    li {
+      margin: 0 calc(15px / 2);
+    }
+
+    a {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #d353a4;
+
+        svg path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  max-width: 490px;
+  width: 100%;
+  margin: 0 auto 240px;
+  padding-left: 130px;
+  font-size: rem(18px);
+  font-style: normal;
+  line-height: 1.34;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    max-width: 340px;
+    margin: 0 auto 240px;
+    padding-left: 0;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0 auto 140px;
+  }
+
+  &__item {
+    padding-left: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__phone {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+
+    &::after {
+      background-image: url("../img/content/ico-phone-yellow.svg");
+    }
+  }
+
+  &__mail {
+    position: relative;
+    color: #e89d25;
+
+    &::after {
+      top: 7px;
+      background-image: url("../img/content/ico-mail.svg");
+    }
+  }
+
+  &__loc {
+    position: relative;
+    left: 2px;
+
+    &::after {
+      background-image: url("../img/content/ico-loc-yellow.svg");
+    }
+  }
+}
+
+.cosmonaut-2 {
+  position: absolute;
+  left: -300px;
+  top: 200px;
+  z-index: 1;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  opacity: 0.4;
+
+  a {
+    color: #fff;
+  }
+
+  span {
+    font-family: Arial;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+.fork-footer-1 {
+  position: absolute;
+  right: 200px;
+  bottom: 350px;
+  transform: rotate(-20deg);
+  animation: cosmonaut-1 2s 1s ease alternate infinite;
+}
+
+.flat-footer-1 {
+  position: absolute;
+  right: -60px;
+  bottom: 270px;
+  animation: cosmonaut-1 2s ease alternate infinite;
+}

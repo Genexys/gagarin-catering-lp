@@ -1,0 +1,31 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/typography";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+
+// Blocks
+//---------------------------------
+
+@import "blocks/app";
+@import "blocks/header";
+@import "blocks/page-banner";
+@import "blocks/block-services";
+@import "blocks/block-advantages";
+@import "blocks/testing-start-form";
+@import "blocks/warranty";
+@import "blocks/clients";
+@import "blocks/consult-form";
+@import "blocks/gallery";
+@import "blocks/footer";

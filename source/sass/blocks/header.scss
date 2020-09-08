@@ -1,0 +1,80 @@
+.main-header {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-top: 40px;
+	padding-left: gw(170px);
+	// background-color: #362f56;
+
+	@media (max-width: 1024px) {
+		padding-left: 0;
+	}
+
+	.container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 2;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__soc-list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		display: flex;
+		flex-grow: 1;
+		justify-content: center;
+		align-items: center;
+		padding-top: 45px;
+
+		@media (max-width: 1024px) {
+			position: relative;
+			justify-content: flex-start;
+			padding-top: 10px;
+			margin-bottom: 30px;
+		}
+
+		li {
+			margin: 0 calc(15px / 2);
+		}
+
+		a {
+			flex-shrink: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: background-color 0.2s;
+
+			&:hover {
+				background-color: #d353a4;
+
+				svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
